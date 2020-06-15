@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name ="viewport" content = "width = device-width">
+    <meta name="description" content="...">
+    <meta name="keywords" content="Product Designer, Human-centered design">
+    <meta name="author" content="...">
+    <title>Yingxi_Ali | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href = "styles copy.css" rel = "stylesheet" type = "text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body style = "background-color:#FCFAFF">
+    <header>
+      <div id="logo">
+      <a href="index copy.html"><img src= "img/logo.jpg" class="image"></a>
+      </div>
+        <div class="container">
+          <!--logo-->
+          <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+                <div class="container">
+                   <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+
+            <!--menu-->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+          <li><a href="index copy.html"> Home</a></li>
+          <li class ="current"><a href="index copy.html#work"> Works </a></li>
+          <li><a href="illustration.html"> Illustration </a></li>
+          <li><a href="about.html"> About me </a></li>
+          <li><a href="resume.html"> Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <img src="img/Bluum.png" alt="" width="100%" height="100%">
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQrnayjjaEya5JwaWDfdt1vY6K3wICyIl2v4a3cnbCmgt8EPNOs3v8bTgk_5Wr5t-0MsOdJVcMmFwIX/embed?start=false&loop=true&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
+  <img src="img/BluumUI.png" alt="" width="100%" height="100%">
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRcSjPFx6Tm8ri-Mg2fta5wy-agkhEWMjnZAVGm1w9M_J1Em-N0yaRA-cCAGNlw5Zyy0sjYBo9CGXXF/embed?start=false&loop=true&delayms=5000"
+  frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true"
+  webkitallowfullscreen="true"></iframe>
+
+  <img src="img/BluumFinal.png" alt="" width="100%" height="100%">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQCfMe58Yj1o7v5jrTmHQ70S0jAWcvhsaXt-UH0MRkkayCpUe4JuADUusiojCz8SeVRurujivjWJ5dd/embed?start=false&loop=true&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+  <img src="img/BluumVideo.png" alt="" width="100%" height="100%">
+  <iframe src="https://drive.google.com/file/d/17ZNqKgnCDOcEQ1dNLZ75Y7Hg9ED_kCT4/preview" width="960" height="569"></iframe>
+<script>
+// The debounce function receives our function as a parameter
+const debounce = (fn) => {
+
+  // This holds the requestAnimationFrame reference, so we can cancel it if we wish
+  let frame;
+
+  // The debounce function returns a new function that can receive a variable number of arguments
+  return (...params) => {
+
+    // If the frame variable has been defined, clear it now, and queue for next frame
+    if (frame) {
+      cancelAnimationFrame(frame);
+    }
+
+    // Queue our function call for the next frame
+    frame = requestAnimationFrame(() => {
+
+      // Call our function and pass any params we received
+      fn(...params);
+    });
+
+  }
+};
+
+
+// Reads out the scroll position and stores it in the data attribute
+// so we can use it in our stylesheets
+const storeScroll = () => {
+  document.documentElement.dataset.scroll = window.scrollY;
+}
+
+// Listen for new scroll events, here we debounce our `storeScroll` function
+document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+
+// Update scroll position for first time
+storeScroll();
+
+</script>
+</body>
+</html>

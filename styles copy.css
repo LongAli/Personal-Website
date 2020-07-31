@@ -3,7 +3,7 @@
 		font:15px/1.5 'Armata', sans-serif;
 		padding:0;
 		margin:0;
-		background-color:#333333;
+		background-color:#ffffff;
 	}
 
 
@@ -128,7 +128,7 @@
 		,url('img/meme.png');*/
 		background-image: url('img/meme.jpg');
 		position: left;
-		background-color: #333333;
+		background-color: #ffffff;
 		background-repeat: no-repeat;
 		background-size:cover;
 		text-align:right;
